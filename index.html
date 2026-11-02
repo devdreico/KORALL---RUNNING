@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101010" />
+    <meta name="description" content="El espacio de equipo de Korall Running: entrenamientos, actividad y rendimiento en un solo lugar." />
+    <title>Korall Running — Team space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navegación principal">
+        <a class="brand" href="#overview" aria-label="Korall Running, inicio">
+          <span class="brand-mark">K<span>.</span></span>
+          <span class="brand-copy"><strong>KORALL</strong><small>RUNNING CLUB</small></span>
+        </a>
+
+        <button class="team-switcher" type="button" aria-label="Equipo activo: Running Club">
+          <span class="team-avatar">R</span>
+          <span class="team-switcher-copy"><strong>Running Club</strong><small>Equipo · 18 miembros</small></span>
+          <i data-lucide="chevrons-up-down" aria-hidden="true"></i>
+        </button>
+
+        <span class="nav-label">ESPACIO DE EQUIPO</span>
+        <nav class="main-nav">
+          <button class="nav-item is-active" type="button" data-page-link="overview"><i data-lucide="layout-dashboard"></i><span>Resumen</span><kbd>01</kbd></button>
+          <button class="nav-item" type="button" data-page-link="sessions"><i data-lucide="footprints"></i><span>Entrenamientos</span><kbd>02</kbd></button>
+          <button class="nav-item" type="button" data-page-link="team"><i data-lucide="users-round"></i><span>Equipo</span><kbd>03</kbd></button>
+          <button class="nav-item" type="button" data-page-link="calendar"><i data-lucide="calendar-days"></i><span>Calendario</span><kbd>04</kbd></button>
+          <button class="nav-item" type="button" data-page-link="stats"><i data-lucide="chart-no-axes-column-increasing"></i><span>Rendimiento</span><kbd>05</kbd></button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="sidebar-weather"><i data-lucide="cloud-sun"></i><div><strong>18° <span>·</span> Nublado</strong><small>Condiciones para correr</small></div></div>
+          <button class="profile-button" type="button"><span class="profile-avatar">AL</span><span><strong>Alex López</strong><small>Capitán del equipo</small></span><i data-lucide="more-horizontal"></i></button>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Korall</span><i data-lucide="chevron-right"></i><strong>Running Club</strong></div>
+          <div class="topbar-actions">
+            <span class="live-indicator"><span></span> TEMPORADA ACTIVA</span>
+            <button class="icon-button notification-button" type="button" aria-label="Notificaciones"><i data-lucide="bell"></i><span class="notification-dot"></span></button>
+            <span class="topbar-avatar">AL</span>
+          </div>
+        </header>
+
+        <div class="page-content">
+          <section class="page-view is-visible" data-page="overview">
+            <div class="page-heading">
+              <div><p class="eyebrow" id="today-label">LUNES, 02 JUNIO 2025 <span class="eyebrow-line"></span> SEMANA 23</p><h1>El ritmo lo marca<br /><span>el equipo.</span></h1><p class="heading-description">Cada kilómetro cuenta más cuando lo compartimos.</p></div>
+              <button class="primary-button" type="button" data-open-modal><i data-lucide="plus"></i><span>Agendar entrenamiento</span></button>
+            </div>
+
+            <div class="hero-strip">
+              <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1400&q=85" alt="Corredores entrenando juntos en la ciudad" />
+              <div class="hero-shade"></div>
+              <div class="hero-caption"><span class="caption-kicker">KORALL RUNNING CLUB</span><strong>Más que kilómetros.<br />Una forma de avanzar.</strong></div>
+              <div class="hero-stats"><span><strong>18</strong> CORREDORES</span><span class="hero-divider"></span><span><strong>1,284</strong> KM ESTE MES</span></div>
+              <span class="hero-index">01 / 04</span>
+            </div>
+
+            <div class="section-heading"><div><p class="eyebrow">EN UNA MIRADA</p><h2>Esta semana</h2></div><button class="text-button" type="button" data-go-page="stats">Ver rendimiento <i data-lucide="arrow-up-right"></i></button></div>
+            <div class="metric-grid">
+              <article class="metric-card glass-panel"><div class="metric-top"><span>Distancia total</span><i data-lucide="move-up-right"></i></div><strong class="metric-value">186.4 <small>km</small></strong><div class="metric-foot"><span class="metric-change">+12.8%</span><span>vs. semana pasada</span><div class="mini-bars" aria-label="Kilómetros por día"><i style="--bar:32%"></i><i style="--bar:50%"></i><i style="--bar:43%"></i><i style="--bar:70%"></i><i style="--bar:54%"></i><i style="--bar:88%"></i><i style="--bar:62%"></i></div></div></article>
+              <article class="metric-card glass-panel"><div class="metric-top"><span>Ritmo medio</span><i data-lucide="timer"></i></div><strong class="metric-value">5:24 <small>/km</small></strong><div class="metric-foot"><span class="metric-change">−00:18</span><span>mejor que la anterior</span><div class="pace-track"><span></span><i></i></div></div></article>
+              <article class="metric-card glass-panel"><div class="metric-top"><span>Miembros activos</span><i data-lucide="users-round"></i></div><strong class="metric-value">14 <small>/ 18</small></strong><div class="metric-foot"><div class="avatar-stack"><span>AL</span><span>MR</span><span>JC</span><span>+11</span></div><span class="attendance-note">en movimiento</span></div></article>
+            </div>
+
+            <div class="overview-columns">
+              <section class="activity-panel glass-panel">
+                <div class="panel-heading"><div><p class="eyebrow">LO ÚLTIMO DEL EQUIPO</p><h2>Actividad reciente</h2></div><button class="icon-button" type="button" data-go-page="sessions" aria-label="Ver todos los entrenamientos"><i data-lucide="arrow-up-right"></i></button></div>
+                <div class="activity-list" id="activity-list">
+                  <article class="activity-row"><span class="activity-icon"><i data-lucide="footprints"></i></span><div class="activity-main"><strong>Rodaje progresivo</strong><span>Alex López · Hoy, 07:12</span></div><div class="activity-data"><strong>8.6 <small>km</small></strong><span>5:12 /km</span></div><span class="status-pill">Completado</span></article>
+                  <article class="activity-row"><span class="activity-icon"><i data-lucide="footprints"></i></span><div class="activity-main"><strong>Series 6 × 800 m</strong><span>Marina Ruiz · Hoy, 06:48</span></div><div class="activity-data"><strong>9.2 <small>km</small></strong><span>4:38 /km</span></div><span class="status-pill">Completado</span></article>
+                  <article class="activity-row"><span class="activity-icon"><i data-lucide="footprints"></i></span><div class="activity-main"><strong>Easy run · Parque</strong><span>Javi Costa · Ayer, 19:26</span></div><div class="activity-data"><strong>6.1 <small>km</small></strong><span>5:48 /km</span></div><span class="status-pill">Completado</span></article>
+                  <article class="activity-row"><span class="activity-icon"><i data-lucide="footprints"></i></span><div class="activity-main"><strong>Fondo de domingo</strong><span>Lucía Martín · Ayer, 08:04</span></div><div class="activity-data"><strong>16.0 <small>km</small></strong><span>5:31 /km</span></div><span class="status-pill">Completado</span></article>
+                </div>
+              </section>
+
+              <aside class="next-session glass-panel">
+                <div class="panel-heading"><div><p class="eyebrow">SIGUIENTE ENCUENTRO</p><h2>Nos vemos pronto</h2></div><span class="day-badge" data-session-offset="2"><strong>04</strong><small>JUN</small></span></div>
+                <div class="session-art"><img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=900&q=80" alt="Corredora entrenando al aire libre" /><span>MIÉRCOLES · 19:00</span></div>
+                <h3>Series en pista</h3><p class="session-subtitle">Pista municipal · Grupo completo</p>
+                <div class="session-meta"><span><i data-lucide="map-pin"></i> Pista de atletismo</span><span><i data-lucide="users-round"></i> 12 apuntados</span></div>
+                <button class="secondary-button" type="button" data-go-page="calendar">Ver calendario <i data-lucide="arrow-right"></i></button>
+              </aside>
+            </div>
+            <footer class="page-footer"><span>KORALL RUNNING CLUB</span><span>COMPETIR JUNTOS. LLEGAR MÁS LEJOS.</span><span>01 — 05</span></footer>
+          </section>
+
+          <section class="page-view" data-page="sessions">
+            <div class="subpage-heading"><div><p class="eyebrow">TU EQUIPO EN MOVIMIENTO</p><h1>Entrenamientos<span>.</span></h1><p class="heading-description">Sesiones compartidas, kilómetros que suman.</p></div><button class="primary-button" type="button" data-open-modal><i data-lucide="plus"></i><span>Agendar sesión</span></button></div>
+            <div class="toolbar glass-panel"><div class="filter-tabs"><button class="filter-tab is-selected" data-filter="all">Todos <span>24</span></button><button class="filter-tab" data-filter="upcoming">Próximos <span>3</span></button><button class="filter-tab" data-filter="completed">Completados <span>21</span></button></div><label class="search-field"><i data-lucide="search"></i><input id="session-search" type="search" placeholder="Buscar sesión" /></label></div>
+            <div class="session-list glass-panel" id="session-list">
+              <article class="session-list-row" data-status="upcoming" data-session-offset="2"><div class="session-date"><strong>04</strong><span>JUN · MIÉ</span></div><div class="session-list-info"><strong>Series en pista</strong><span>19:00 · Pista municipal · Alex López</span></div><span class="session-type">VELOCIDAD</span><span class="session-attendance"><i data-lucide="users-round"></i> 12 / 18</span><button class="icon-button" aria-label="Ver sesión"><i data-lucide="arrow-up-right"></i></button></article>
+              <article class="session-list-row" data-status="upcoming" data-session-offset="4"><div class="session-date"><strong>06</strong><span>JUN · VIE</span></div><div class="session-list-info"><strong>Rodaje suave + movilidad</strong><span>18:30 · Parque del Río · Marina Ruiz</span></div><span class="session-type">RECUPERACIÓN</span><span class="session-attendance"><i data-lucide="users-round"></i> 8 / 18</span><button class="icon-button" aria-label="Ver sesión"><i data-lucide="arrow-up-right"></i></button></article>
+              <article class="session-list-row" data-status="upcoming" data-session-offset="6"><div class="session-date"><strong>08</strong><span>JUN · DOM</span></div><div class="session-list-info"><strong>Fondo progresivo · 16 km</strong><span>08:00 · Puente de la ciudad · Javi Costa</span></div><span class="session-type">FONDO</span><span class="session-attendance"><i data-lucide="users-round"></i> 15 / 18</span><button class="icon-button" aria-label="Ver sesión"><i data-lucide="arrow-up-right"></i></button></article>
+              <article class="session-list-row" data-status="completed" data-session-offset="-2"><div class="session-date"><strong>02</strong><span>JUN · LUN</span></div><div class="session-list-info"><strong>Series 6 × 800 m</strong><span>06:45 · Pista municipal · Marina Ruiz</span></div><span class="session-type">VELOCIDAD</span><span class="session-attendance completed-tag">COMPLETADO</span><button class="icon-button" aria-label="Ver sesión"><i data-lucide="arrow-up-right"></i></button></article>
+              <article class="session-list-row" data-status="completed" data-session-offset="-3"><div class="session-date"><strong>01</strong><span>JUN · DOM</span></div><div class="session-list-info"><strong>Fondo de domingo</strong><span>08:00 · Ribera norte · Lucía Martín</span></div><span class="session-type">FONDO</span><span class="session-attendance completed-tag">COMPLETADO</span><button class="icon-button" aria-label="Ver sesión"><i data-lucide="arrow-up-right"></i></button></article>
+            </div>
+          </section>
+
+          <section class="page-view" data-page="team">
+            <div class="subpage-heading"><div><p class="eyebrow">18 PERSONAS · UN MISMO RITMO</p><h1>El equipo<span>.</span></h1><p class="heading-description">Talento individual. Energía colectiva.</p></div><button class="secondary-button invite-button" type="button"><i data-lucide="user-round-plus"></i> Invitar corredor</button></div>
+            <div class="team-banner"><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1600&q=85" alt="Grupo de corredores en un entrenamiento" /><div><span>ESTA SEMANA</span><strong>186.4 km</strong><small>recorridos en equipo</small></div></div>
+            <div class="section-heading team-section-heading"><div><p class="eyebrow">NUESTROS CORREDORES</p><h2>La plantilla</h2></div><label class="search-field"><i data-lucide="search"></i><input id="team-search" type="search" placeholder="Buscar miembro" /></label></div>
+            <div class="roster-grid" id="roster-grid"></div>
+          </section>
+
+          <section class="page-view" data-page="calendar">
+            <div class="subpage-heading"><div><p class="eyebrow" id="calendar-week-label">SEMANA 23 · 2025</p><h1>Calendario<span>.</span></h1><p class="heading-description">Un buen plan se corre mejor en compañía.</p></div><button class="primary-button" type="button" data-open-modal><i data-lucide="plus"></i><span>Nueva sesión</span></button></div>
+            <div class="calendar-layout"><div class="calendar-main glass-panel"><div class="calendar-toolbar"><button class="icon-button" aria-label="Semana anterior"><i data-lucide="chevron-left"></i></button><strong id="calendar-range">2 — 8 junio 2025</strong><button class="icon-button" aria-label="Semana siguiente"><i data-lucide="chevron-right"></i></button><button class="text-button">Esta semana</button></div><div class="week-grid" id="week-grid"></div></div><aside class="calendar-note glass-panel"><p class="eyebrow">OBJETIVO DE LA SEMANA</p><strong>220 <small>km</small></strong><div class="goal-track"><span></span></div><p><b>186.4 km</b> completados<br />Quedan 33.6 km para el objetivo.</p><div class="calendar-note-rule"></div><span class="eyebrow">PRÓXIMA SESIÓN</span><h3>Series en pista</h3><p>Miércoles, 4 junio · 19:00</p></aside></div>
+          </section>
+
+          <section class="page-view" data-page="stats">
+            <div class="subpage-heading"><div><p class="eyebrow" id="stats-week-label">SEMANA 23 · DEL 2 AL 8 DE JUNIO</p><h1>Rendimiento<span>.</span></h1><p class="heading-description">El progreso se construye, paso a paso.</p></div><button class="secondary-button period-button"><i data-lucide="calendar-range"></i> Esta semana <i data-lucide="chevron-down"></i></button></div>
+            <div class="stats-top-grid"><article class="stat-feature glass-panel"><div class="panel-heading"><div><p class="eyebrow">DISTANCIA DEL EQUIPO</p><h2>Volumen semanal</h2></div><span class="metric-change">+12.8%</span></div><strong class="stat-big-number">186.4 <small>km</small></strong><div class="chart-bars" aria-label="Gráfico de distancia diaria"><div><i style="--bar:38%"></i><span>LUN</span></div><div><i style="--bar:56%"></i><span>MAR</span></div><div><i style="--bar:43%"></i><span>MIÉ</span></div><div><i style="--bar:76%"></i><span>JUE</span></div><div><i style="--bar:64%"></i><span>VIE</span></div><div><i style="--bar:92%"></i><span>SÁB</span></div><div><i style="--bar:71%"></i><span>DOM</span></div></div></article><article class="stat-side glass-panel"><p class="eyebrow">RITMO MEDIO</p><strong>5:24 <small>/km</small></strong><div class="stat-line"><span>Semana anterior</span><b>5:42 /km</b></div><div class="stat-side-rule"></div><p class="eyebrow">TOTAL DE SESIONES</p><strong>32 <small>sesiones</small></strong><div class="stat-line"><span>Corredores activos</span><b>14 / 18</b></div></article></div>
+            <div class="section-heading"><div><p class="eyebrow">LIDERAZGO INDIVIDUAL</p><h2>Top corredores</h2></div><span class="table-caption">POR DISTANCIA · ESTA SEMANA</span></div>
+            <div class="leaderboard glass-panel"><div class="leader-row leader-header"><span>POS.</span><span>CORREDOR</span><span>DISTANCIA</span><span>RITMO MEDIO</span><span>SESIONES</span></div><div class="leader-row"><span>01</span><strong><i>AL</i> Alex López</strong><b>42.8 km</b><span>4:58 /km</span><span>5</span></div><div class="leader-row"><span>02</span><strong><i>MR</i> Marina Ruiz</strong><b>38.2 km</b><span>5:06 /km</span><span>6</span></div><div class="leader-row"><span>03</span><strong><i>JC</i> Javi Costa</strong><b>31.5 km</b><span>5:21 /km</span><span>4</span></div><div class="leader-row"><span>04</span><strong><i>LM</i> Lucía Martín</strong><b>28.0 km</b><span>5:18 /km</span><span>4</span></div></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="session-modal" id="session-modal">
+      <form method="dialog" class="modal-top"><div><p class="eyebrow">KORALL RUNNING CLUB</p><h2>Agendar entrenamiento</h2></div><button class="icon-button" aria-label="Cerrar"><i data-lucide="x"></i></button></form>
+      <form id="session-form" class="modal-form">
+        <label>Nombre de la sesión<input name="title" placeholder="Ej. Rodaje progresivo" required /></label>
+        <div class="form-row"><label>Fecha<input name="date" type="date" required /></label><label>Hora<input name="time" type="time" value="19:00" required /></label></div>
+        <label>Lugar<input name="location" placeholder="Punto de encuentro" required /></label>
+        <label>Tipo de entrenamiento<select name="type"><option>Rodaje</option><option>Velocidad</option><option>Fondo</option><option>Recuperación</option><option>Otro</option></select></label>
+        <button class="primary-button modal-submit" type="submit"><i data-lucide="calendar-check"></i> Crear entrenamiento</button>
+      </form>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
